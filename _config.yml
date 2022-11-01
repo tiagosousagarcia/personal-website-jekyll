@@ -26,6 +26,8 @@ baseurl: "/personal-website-jekyll/" # the subpath of your site, e.g. /blog
 url: "https://tiagosousagarcia.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tiagosousagarci
 github_username:  tiagosousagarcia
+instagram_username: tiagosousagarcia
+orcid_username: 0000-0001-5694-7285
 
 # Build settings
 theme: minima
