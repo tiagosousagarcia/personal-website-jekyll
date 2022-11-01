@@ -22,8 +22,8 @@ title: Tiago Sousa Garcia
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the personal website of Tiago Sousa Garcia, a research software engineer and academic with specialisms in Early Modern Literature and Digital Humanities, and interests in film photography.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/personal-website-jekyll/" # the subpath of your site, e.g. /blog
+url: "https://tiagosousagarcia.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tiagosousagarci
 github_username:  tiagosousagarcia
 
