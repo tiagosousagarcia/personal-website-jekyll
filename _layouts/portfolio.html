@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{%- for photo in site.data.photos -%}
+    <p>{{photo.title}}</p>
+    <p>{{photo.description}}</p>
+    <p>{{photo.date}}</p>
+    <p>{{photo.camera}}</p>
+    <p>{{photo.lens}}</p>
+    <p>{{photo.film}}</p>
+    <p>{{photo.format}}</p>
+    <p>{{photo.dev-notes}}</p>
+    <p>{{photo.scan-notes}}</p>
+{%- endfor -%}
