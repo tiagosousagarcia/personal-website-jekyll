@@ -1,15 +1,33 @@
 ---
 layout: default
 ---
-
-{%- for photo in site.data.photos -%}
-    <p>{{photo.title}}</p>
-    <p>{{photo.description}}</p>
-    <p>{{photo.date}}</p>
-    <p>{{photo.camera}}</p>
-    <p>{{photo.lens}}</p>
-    <p>{{photo.film}}</p>
-    <p>{{photo.format}}</p>
-    <p>{{photo.dev-notes}}</p>
-    <p>{{photo.scan-notes}}</p>
+{%- for genre in site.data.genres -%}
+    <section id={{genre.genre}}>
+        <div class="section-intro">
+            <header class="section-header">
+                {{genre.genre-title}}
+            </header>
+            <p class="section-lead">{{genre.intro-text | markdownify}}</p>
+        </div>
+    </section>
+    {%- for photo in site.data.photos -%}
+    {%- if photo.genre == genre.genre -%}
+        <div>
+            <div class="photo-container">
+                <img src="{{site.baseurl}}/{{photo.url}}" class="img-{{photo.aspect}}">
+            </div>
+            <div class="text-container">
+                <h2 class="photo-title">{{photo.title}}</h2>
+                <p class="photo-description">{{photo.description}}</p>
+                <p class="photo-date">{{photo.date}}</p>
+                <p class="technical camera">{{photo.camera}}</p>
+                <p class="technical lens">{{photo.lens}}</p>
+                <p class="technical film">{{photo.film}}</p>
+                <p class="technical format">{{photo.format}}</p>
+                <p class="technical development">{{photo.dev-notes}}</p>
+                <p class="technical scan">{{photo.scan-notes}}</p>
+            </div>
+        </div>
+    {%- endif -%}
+    {%- endfor -%}
 {%- endfor -%}
