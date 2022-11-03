@@ -19,7 +19,7 @@
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
               {%- if my_page.title -%}
-              {%- unless my_page.title == 'index' -%}
+              {%- unless my_page.title == 'index' or my_page.title == 'Portfolio' -%}
                 <a class="page-link" href="#{{my_page.title}}">{{ my_page.title | escape }}</a>
               {%- endunless -%}
               {%- endif -%}
