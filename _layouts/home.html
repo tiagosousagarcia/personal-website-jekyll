@@ -4,15 +4,15 @@ layout: default
 
 {{ content }}
 
-{% assign pages-to-show = "About me, Research, Projects, Publications, Photography" | split: ", " %}
+{%- assign pages-to-show = "About me, Research, Projects, Publications, Photography" | split: ", " -%}
 
 {%- for section in site.pages -%}
-{% if pages-to-show contains section.title %}
+{%- if pages-to-show contains section.title -%}
 <div class="section"  id="{{section.title}}">
     {% unless section.title == 'About me' %}
         <h2 class="section-title">{{ section.title | markdownify }}</h2>
     {% endunless %}
     {{ section.content | markdownify }}
 </div>
-{% endif %}
+{%- endif -%}
 {%- endfor -%}
