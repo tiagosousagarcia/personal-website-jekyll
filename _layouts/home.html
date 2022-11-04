@@ -9,10 +9,18 @@ layout: default
 {%- for section in site.pages -%}
 {%- if pages-to-show contains section.title -%}
 <div class="section"  id="{{section.title}}">
-    {% unless section.title == 'About me' %}
-        <h2 class="section-title">{{ section.title | markdownify }}</h2>
-    {% endunless %}
-    {{ section.content | markdownify }}
+    {%- unless section.title == 'About me' -%}
+        <h2 class="section-title">{{- section.title | markdownify -}}</h2>
+    {%- endunless -%}
+    {{- section.content | markdownify -}}
+    {%- if section.title == 'Projects' -%}
+        {%- for project in site.projects -%}
+            <div class="project">
+                <a href="{{site.baseurl}}{{ project.url }}"><h3>{{project.title | markdownify }}</h3></a>
+                <p>{{project.blurb | markdownify }}</p>
+            </div>
+        {%- endfor -%}
+    {%- endif -%}
 </div>
 {%- endif -%}
 {%- endfor -%}
