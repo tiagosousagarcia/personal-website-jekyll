@@ -21,6 +21,14 @@ layout: default
             </div>
         {%- endfor -%}
     {%- endif -%}
+    {%- if section.title == "Research" -%}
+        {%- for research-interest in site.research -%}
+            <div class="research-interest">
+                <h3>{{research-interest.title | markdownify}}</h3>
+                <p>{{research-interest.content | markdownify}}</p>
+            </div>
+        {%- endfor -%}
+    {%- endif -%}
 </div>
 {%- endif -%}
 {%- endfor -%}
