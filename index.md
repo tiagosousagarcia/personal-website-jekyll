@@ -5,6 +5,8 @@
 layout: home
 title: index
 ---
-
+{:.site-title}
 # Tiago Sousa Garcia
+
+{:.site-subtitle}
 ## Early Modern Literature | Digital Humanities | Photography
