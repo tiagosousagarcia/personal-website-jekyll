@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 63px;
+        fill: #363946;
+        font-family: Raleway;
+        font-weight: 800;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .cls-1 {
+          fill: whitesmoke;
+        }
+      }
+    </style>
+  </defs>
+  <text id="TSG" class="cls-1" x="3" y="85">TSG</text>
+</svg>

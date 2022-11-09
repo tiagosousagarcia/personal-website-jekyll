@@ -3,6 +3,7 @@ layout: page
 title: About me
 permalink: /about/
 ---
+{:.section-lead}
 ### Hey, thanks for stopping by.
 
 If you are seeing this, I assume you are at least somewhat interested in learning something about me so here are the essentials.

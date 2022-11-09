@@ -1,34 +1,40 @@
 ---
 layout: default
 ---
-
-{{ content }}
+<div class="banner-title">
+    {{ content }}
+</div>
 
 {%- assign pages-to-show = "About me, Research, Projects, Publications, Photography" | split: ", " -%}
-
-{%- for section in site.pages -%}
-{%- if pages-to-show contains section.title -%}
-<div class="section"  id="{{section.title}}">
-    {%- unless section.title == 'About me' -%}
-        <h2 class="section-title">{{- section.title | markdownify -}}</h2>
-    {%- endunless -%}
-    {{- section.content | markdownify -}}
-    {%- if section.title == 'Projects' -%}
-        {%- for project in site.projects -%}
-            <div class="project">
-                <a href="{{site.baseurl}}{{ project.url }}"><h3>{{project.title | markdownify }}</h3></a>
-                <p>{{project.blurb | markdownify }}</p>
+<div class="content-main">
+    {%- for section in site.pages -%}
+    {%- if pages-to-show contains section.title -%}
+    <div class="section"  id="{{section.title}}">
+        {%- unless section.title == 'About me' -%}
+            <h2 class="section-title">{{- section.title}}</h2>
+        {%- endunless -%}
+        {{- section.content | markdownify -}}
+        {%- if section.title == 'Projects' -%}
+        <div class="subsection">
+                {%- for project in site.projects -%}
+                    <div class="sub-subsection project">
+                        <a href="{{site.baseurl}}{{ project.url }}"><h3 class="subsection-title">{{project.title | markdownify }}</h3></a>
+                        <p class="subsection-blurb">{{project.blurb | markdownify }}</p>
+                    </div>
+                {%- endfor -%}
+        </div>
+        {%- endif -%}
+        {%- if section.title == "Research" -%}
+            <div class="subsection">
+                {%- for research-interest in site.research -%}
+                    <div class="sub-subsection research-interest">
+                        <h3 class="subsection-title">{{research-interest.title | markdownify}}</h3>
+                        <p class="subsection-blurb">{{research-interest.content | markdownify}}</p>
+                    </div>
+                {%- endfor -%}
             </div>
-        {%- endfor -%}
+        {%- endif -%}
+    </div>
     {%- endif -%}
-    {%- if section.title == "Research" -%}
-        {%- for research-interest in site.research -%}
-            <div class="research-interest">
-                <h3>{{research-interest.title | markdownify}}</h3>
-                <p>{{research-interest.content | markdownify}}</p>
-            </div>
-        {%- endfor -%}
-    {%- endif -%}
+    {%- endfor -%}
 </div>
-{%- endif -%}
-{%- endfor -%}

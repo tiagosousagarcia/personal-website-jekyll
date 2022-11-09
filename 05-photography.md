@@ -3,7 +3,7 @@ layout: page
 title: Photography
 permalink: /photography/
 ---
-
+{:.section-lead}
 ### Photography, for me, really means film photography.
 
 I have done some sort of photography ever since I can remember: first as childish play with my parents' point-and-shoot, *sans* film of course, later graduating to actually being able to take pictures at special events and even, at least once, to take the cheap camera along by myself in a school trip to the zoo -- the result was a whole roll of fence close-ups.
