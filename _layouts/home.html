@@ -10,9 +10,7 @@ layout: default
     {%- for section in site.pages -%}
     {%- if pages-to-show contains section.title -%}
     <div class="section"  id="{{section.title}}">
-        {%- unless section.title == 'About me' -%}
             <h2 class="section-title">{{- section.title}}</h2>
-        {%- endunless -%}
         {{- section.content | markdownify -}}
         {%- if section.title == 'Projects' -%}
         <div class="subsection">
@@ -38,3 +36,8 @@ layout: default
     {%- endif -%}
     {%- endfor -%}
 </div>
+<a href="portfolio/" class="portfolio-link">
+    <div class="portfolio-banner">
+        <h4 class="banner-text">Portfolio</h4>
+    </div>
+</a>
